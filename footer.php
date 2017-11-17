@@ -1,12 +1,15 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<footer class="main-footer" role="contentinfo">
+                <div class="container">
+                    <!-- copyright -->
+                    <p class="copyright">
+                        &copy; Al Gufo Bianco - p.iva 08098790010 Corso Dante 129/c 10126 Torino
+Tel 011 66 92 577 / 011 65 05 431 - info@gufobianco.com
+                    </p>
+                    <!-- /copyright -->
+                </div>
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+				
 
 			</footer>
 			<!-- /footer -->

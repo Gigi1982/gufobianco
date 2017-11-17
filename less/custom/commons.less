@@ -1,3 +1,31 @@
 body {
-    background: #ff00ff;
+    //background: aqua;
+    background-color: @brand-primary;
+}
+
+.padded-content {
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+
+a {
+    color: @chocolate;
+}
+
+.content-boxes {
+    margin-top:30px;
+    padding-bottom: 30px;
+    &.border-bottom {
+        position: relative;
+        &:after {
+            content:"";
+            position: absolute;
+            left:20%;
+            right:20%;
+            bottom: 0;
+            height: 4px;
+            background-color: #fff;
+        }
+    }
 }

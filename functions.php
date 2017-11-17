@@ -247,6 +247,8 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
     echo $output;
 }
 
+
+
 // Custom View Article link to Post
 function html5_blank_view_article($more)
 {
