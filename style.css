@@ -6754,7 +6754,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #624f41;
-  font-size: 16px;
+  font-size: 14px;
 }
 body h1,
 body h2,
@@ -6781,10 +6781,10 @@ h5,
 }
 h1,
 .h1 {
-  font-size: 60px;
+  font-size: 50px;
 }
 h3 {
-  font-size: 16px;
+  font-size: 14px;
 }
 @font-face {
   font-family: 'fontello';
@@ -6863,7 +6863,7 @@ h3 {
   color: #bf1523;
 }
 .gufobianco-header .gufobianco-desktop-nav ul > li > a {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #d3c3aa;
 }
@@ -6907,7 +6907,7 @@ h3 {
   text-align: center;
   max-width: 550px;
   margin: 20px auto;
-  font-size: 14px;
+  font-size: 12px;
 }
 .news-listing .gufo-news-last {
   list-style-type: none;
