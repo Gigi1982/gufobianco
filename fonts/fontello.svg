@@ -6,6 +6,8 @@
 <font id="fontello" horiz-adv-x="1000" >
 <font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="cancel" unicode="&#xe800;" d="M452 194q18-18 18-43t-18-43q-18-16-43-16t-43 16l-132 152-132-152q-18-16-43-16t-43 16q-16 18-16 43t16 43l138 156-138 158q-16 18-16 43t16 43q18 16 43 16t43-16l132-152 132 152q18 16 43 16t43-16q18-18 18-43t-18-43l-138-158z" horiz-adv-x="470" />
+
 <glyph glyph-name="instagram" unicode="&#xe802;" d="M832 54v362h-76q11-35 11-73 0-71-35-130t-97-94-134-35q-110 0-188 76t-79 183q0 38 12 73h-79v-362q0-14 10-24t24-10h596q14 0 24 10t11 24z m-159 298q0 69-50 118t-122 49q-71 0-122-49t-50-118 50-118 122-49q71 0 122 49t50 118z m159 201v92q0 15-12 27t-27 11h-97q-16 0-27-11t-12-27v-92q0-17 12-28t27-11h97q16 0 27 11t12 28z m97 116v-638q0-45-33-77t-77-33h-638q-45 0-77 33t-33 77v638q0 45 33 77t77 33h638q45 0 77-33t33-77z" horiz-adv-x="1000" />
 
 <glyph glyph-name="facebook" unicode="&#xe803;" d="M250 516h125l-15-139h-110v-402h-167v402h-83v139h83v84c0 59 14 104 42 134s74 46 138 46h111v-139h-69c-13 0-23-1-31-3s-13-6-16-12-6-11-7-16-1-14-1-25v-69z" horiz-adv-x="375" />

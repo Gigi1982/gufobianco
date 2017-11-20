@@ -1,0 +1,113 @@
+body.single-post {
+    //border: none;
+    //color:#ddd;
+//    //background-color:@open-menu-bg;
+//    .news-listing {
+//       border: none; 
+//    }
+//    .mobile-nav-container {
+//        display:none;
+//    }
+//    .right-nav, .back-home-button {
+//        display:none; 
+//    }
+//    .close-toggle {
+//        display: block;
+//    }
+//    .breadcrumbs {
+//        display: none;
+//    }
+}
+
+.news-listing, .spettacoli-content {
+    margin:0 auto;
+    .listing-content-block {
+        padding-top:100px;
+        margin-bottom: 20px;
+        //border-bottom: 1px solid @grey-light;
+        @media screen and (max-width: 768px) {
+            padding-top: 30px;
+        }
+    }
+    /*==== single news styles ===*/
+    
+    /*==== popup fixed ===*/
+    
+    
+    
+    .condividi-button {
+        position: fixed;
+        top:50%;
+        right:100px;
+        width:56px;
+        margin-top:-28px;
+        transform: rotate(-90deg);
+        //transform: translate(0,-50%);
+    }
+    
+    .single-news-container {
+        
+    }
+}
+
+.close-news-container {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 11;
+    .icon {
+        font-size: 40px;
+        color: #fff;
+    }
+}
+
+.single-news-featured-image {
+    max-width: 830px;
+    margin:0 auto;
+    padding-top: 150px;
+    @media screen and (max-width:768px) {
+        padding-top: 80px;
+    }
+}
+
+.news-popup-container{
+    .news-article-inner {
+        background-color: @brand-primary;
+        padding: 40px 100px;
+    }
+    .news-main-fadein {
+        position: relative;
+        top:40px;
+        opacity:0;
+    }
+    #news-article {
+        margin:40px 0;
+    }
+    .single-news-container {
+        @media screen and (max-width:768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+    }
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    left:0;
+    top:0;
+    height: 100%;
+    right:0;
+    background:rgba(0,0,0,.8);
+    z-index: 11;
+    .close-toggle {
+        display: block;
+    }
+    &.loading{
+        background: @open-menu-bg url(img/loader.gif) no-repeat center center;
+        background-size: 40px;
+    }
+}
+

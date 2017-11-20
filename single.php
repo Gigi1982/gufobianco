@@ -3,49 +3,73 @@
 	<main role="main">
 	<!-- section -->
 	<section>
+        
+        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+            <!-- article -->
+            
+                <article id="news-article" <?php post_class(); ?>>
+                    <div class="container">
+                    <!-- custom code -->
+                        <div class="news-article-inner">
+                        
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
-
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
-
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
-
-			<?php the_content(); // Dynamic Content ?>
-
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			<?php comments_template(); ?>
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-
+                        <!-- header -->
+                            <header class="close-news-container">
+                                <a href="<?php echo get_permalink( get_option('page_for_posts' ));?>" class="close-button"><i class="icon icon-cancel"></i></a>
+                            </header>
+                            <!-- single news content -->
+                            <!-- post thumbnail -->
+                            <section class="news-main-fadein">
+                                <?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+                                    <header class="single-news-featured-image">
+                                        <?php the_post_thumbnail('news-image', array('class'=> "img-responsive"));?>
+                                    </header>
+                                <?php endif; ?>
+                                <!-- /post thumbnail -->
+                                <section class="single-news-container">
+                                    <div class="news-content">
+                                        <header class="news-content-head">
+                                            <div class="date-container"><span class="news-single-date"><?php the_date('d M Y');?></span></div>
+                                            <h1 class="news-h1"><?php the_title(); ?></h1>
+                                        </header>
+                                        <section class="news-content-inner">
+                                            <aside class="share-button">
+                                                <div href="#" class="rotated-button">NEWS</div>
+                                            </aside>
+                                            <?php the_content();?>
+                                        </section>
+                                        <footer class="news-footer">
+                                             <!--if previous post exists-->
+                                            <?php
+                                            $prev_post = get_previous_post();
+                                            if (!empty( $prev_post )): ?>
+                                            <div class="navigation-left">
+                                                <div class="content-navigation">
+                                                    <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="news-links"><i class="svgicons svgicons-back-button"></i></a>
+                                                </div>
+                                            </div>
+                                            <?php endif; ?>
+                                            <!--if next post exists-->
+                                            <?php
+                                            $next_post = get_next_post();
+                                            if (!empty( $next_post )): ?>
+                                            <div class="navigation-right">
+                                                <div class="content-navigation">
+                                                    <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="news-links"><i class="svgicons svgicons-next-button"></i></a>
+                                                </div>
+                                            </div>
+                                            <?php endif; ?>
+                                        </footer>
+                                    </div>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+                <!-- /article -->
+            
+        <?php endwhile; ?>
 	<?php else: ?>
 
 		<!-- article -->
@@ -61,7 +85,5 @@
 	</section>
 	<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
