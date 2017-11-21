@@ -54,6 +54,19 @@
                 jQuery("body").css("overflow", "visible");
             })
         }
+        
+        $('#lightSlider').lightSlider({
+            gallery: true,
+            item: 1,
+            loop: true,
+            slideMargin: 0,
+            thumbItem: 9
+        });
+        
+        $(".menu-reveal").click(function(){
+            $(".menu-hidden").slideToggle();
+            return false;
+        });
 		
 	});
 	
