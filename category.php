@@ -2,18 +2,19 @@
 
 	<main role="main">
 		<!-- section -->
-		<section>
+		<section class="category-listing">
+            <div class="container">
+                <h1><?php single_cat_title(); ?></h1>
 
-			<h1><?php _e( 'Categories for ', 'html5blank' ); single_cat_title(); ?></h1>
-
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
+                <div class="row"><?php get_template_part('loop'); ?></div>
+            </div>
 		</section>
 		<!-- /section -->
+        <div class="news-popup-container popup-container">
+            <div class="container">
+            <!-- ajax -->
+            </div>
+        </div>
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -31,7 +31,7 @@
                                     <div class="news-content">
                                         <header class="news-content-head">
                                             <div class="date-container"><span class="news-single-date"><?php the_date('d M Y');?></span></div>
-                                            <h1 class="news-h1"><?php the_title(); ?></h1>
+                                            <h1 class="h2"><?php the_title(); ?></h1>
                                         </header>
                                         <section class="news-content-inner">
                                             <aside class="share-button">

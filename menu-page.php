@@ -33,12 +33,14 @@
                     <?php if(have_rows('menu_aggiuntivi')): ?>            
                     <h2 class="h1 text-center">proposte menù</h2>
                     <div class="row">
+                        <?php while (have_rows('menu_aggiuntivi')) : the_row(); ?>
                         <div class="col-sm-6 col-md-4">
                             <div class="menu-bg menu-item">
-                                <h4>Menu #1</h4>
+                                <h4><?php the_sub_field('titolo_menu'); ?></h4>
                                 <img class="img-responsive" src="http://lorempixel.com/300/200/sports/1">
                             </div>
-                        </div>            
+                        </div>
+                        <?php endwhile; ?>
                     </div>
                     <?php endif; ?>
                 </div>

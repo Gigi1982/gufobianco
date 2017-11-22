@@ -4147,7 +4147,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 170px;
+  min-height: 140px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -4253,10 +4253,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 75px 15px;
+  padding: 60px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 170px;
+  height: 140px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4276,8 +4276,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 68px;
-  margin-bottom: 68px;
+  margin-top: 53px;
+  margin-bottom: 53px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -4301,7 +4301,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 37.5px -15px;
+  margin: 30px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -4339,8 +4339,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 .navbar-form {
@@ -4351,8 +4351,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 68px;
-  margin-bottom: 68px;
+  margin-top: 53px;
+  margin-bottom: 53px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4437,20 +4437,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 68px;
-  margin-bottom: 68px;
+  margin-top: 53px;
+  margin-bottom: 53px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 55px;
+  margin-bottom: 55px;
 }
 .navbar-btn.btn-xs {
-  margin-top: 74px;
-  margin-bottom: 74px;
+  margin-top: 59px;
+  margin-bottom: 59px;
 }
 .navbar-text {
-  margin-top: 75px;
-  margin-bottom: 75px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 @media (min-width: 768px) {
   .navbar-text {
@@ -6783,7 +6783,12 @@ h1,
 .h1 {
   font-size: 50px;
 }
-h3 {
+h2,
+.h2 {
+  font-size: 30px;
+}
+h3,
+.h3 {
   font-size: 14px;
 }
 @font-face {
@@ -6845,13 +6850,13 @@ h3 {
 /* '' */
 .gufobianco-header {
   background-color: #624f41;
-  height: 170px;
+  height: 140px;
 }
 .gufobianco-header .gufobianco-header-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 170px;
+  height: 140px;
 }
 .gufobianco-header .gufobianco-desktop-nav {
   width: 70%;
@@ -6958,9 +6963,7 @@ body.single-post .close-button {
   color: #fff;
 }
 .single-news-featured-image {
-  max-width: 830px;
-  margin: 0 auto;
-  padding-top: 150px;
+  margin: 40px 0;
 }
 @media screen and (max-width: 768px) {
   .single-news-featured-image {
@@ -7007,6 +7010,23 @@ body.single-post .close-button {
 .page-main .page-main-inner {
   padding: 40px 0;
 }
+.page-main .page-slideshow #lightSlider li {
+  margin: 0 auto;
+}
+.page-main .page-slideshow #lightSlider li > img {
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 1280px) {
+  .page-main .page-slideshow #lightSlider li {
+    height: 450px;
+  }
+  .page-main .page-slideshow #lightSlider li > img {
+    max-height: -webkit-fill-available;
+    max-height: -moz-available;
+    max-height: 100%;
+  }
+}
 .menu-bg {
   background-color: #ece3d3;
   border-radius: 10px;
@@ -7021,6 +7041,12 @@ body.single-post .close-button {
 .menu-bg .menu-row {
   display: flex;
   justify-content: space-between;
+}
+.category-listing article > a {
+  display: flex;
+  flex-flow: column;
+  min-height: 250px;
+  justify-content: space-around;
 }
 @font-face {
   font-family: 'lg';

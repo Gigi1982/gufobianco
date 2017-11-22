@@ -39,7 +39,7 @@ della genuinità e con un tocco di creatività.</p>
                             $templateUrl = get_template_directory_uri();
                             $bg = get_the_post_thumbnail_url();
                             if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-                            xxxxx
+                            
                             <?php endif; ?>
                             <h3><a data-lightboxTarget="#news-article" href="<?php the_permalink(); ?>" title="Read more"><span class="">-</span><?php the_title(); ?></a></h3>
                             <?php //if(get_field('news_testo')): ?>
@@ -52,6 +52,36 @@ della genuinità e con un tocco di creatività.</p>
                         <?php endwhile; ?> 
                         <?php wp_reset_postdata(); ?>
 
+                        <?php endif; ?>
+                    </ul>
+                    <ul class="last-three-news-images">
+                        <?php
+                            global $wp_query, $paged;
+
+                            $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                            $QueryImagesArgs = array(
+                                //'offset'           => 1,
+                                'posts_per_page'   => 3,
+                                'post_type'        => 'post',
+                                'post_status'      => 'publish',
+                                'suppress_filters' => true,
+                                'order' => 'ASC'
+                            );
+                            $HomeImagesQuery = new WP_Query( $QueryImagesArgs  );                  
+                        ?>
+
+                        <?php if ($HomeImagesQuery ->have_posts()): while ($HomeImagesQuery ->have_posts()) : $HomeImagesQuery ->the_post(); ?>
+                            <!-- post thumbnail -->
+                            <?php 
+                            $templateUrl = get_template_directory_uri();
+                            $bg = get_the_post_thumbnail_url($post_id, array(150,150));
+                            if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+                                <img src="<?php echo $bg; ?>">
+                            <?php endif; ?>
+                        
+                        <?php endwhile; ?> 
+                        <?php wp_reset_postdata(); ?>
+                        
                         <?php endif; ?>
                     </ul>
                 </section>
