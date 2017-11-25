@@ -1,5 +1,5 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-    <div class="col-md-3">
+    <div class="col-sm-6 col-md-3">
         <!-- article -->
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <a data-lightboxTarget="#news-article" href="<?php the_permalink(); ?>" title="Read more">
@@ -11,7 +11,7 @@
 
             <!-- post thumbnail -->
             <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-                <?php the_post_thumbnail(array(220,140)); // Declare pixel size you need inside the array ?>
+                <?php the_post_thumbnail(array(150,140)); // Declare pixel size you need inside the array ?>
             <?php endif; ?>
             <!-- /post thumbnail -->
 

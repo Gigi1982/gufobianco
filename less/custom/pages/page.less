@@ -12,6 +12,26 @@
                 }
             }
         }
+        .lSPager {
+            li {
+                position: relative;
+                &:after {
+                    content: "";
+                    background: rgba(0,0,0,.4);
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    transition: background 400ms ease-in-out;
+                }
+                &.active {
+                    &:after {
+                        background: rgba(0,0,0,0);
+                    }
+                }
+            }            
+        }
         @media screen and (max-width:1280px) {
             #lightSlider {
                 li{

@@ -1,29 +1,34 @@
-<?php /* Template Name: Demo Page Template */ get_header(); ?>
+<?php /* Template Name: Contatti Template */ get_header(); ?>
 
 	<main role="main">
 		<!-- section -->
-		<section>
+		<section class="contatti-page">
+                <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<h1><?php the_title(); ?></h1>
+                    <!-- article -->
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+                        <section class="contact-map">
+                            <?php 
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                            $locationCont = get_field('mappa');
 
-				<?php the_content(); ?>
+                            if( !empty($locationCont) ):
+                            ?>
+                            <div class="acf-map">
+                                <div class="marker" data-lat="<?php echo $locationCont['lat']; ?>" data-lng="<?php echo $locationCont['lng']; ?>"></div>
+                            </div>
+                            <?php endif; ?>
+                        </section>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+                    </article>
+                    <!-- /article -->
 
-				<br class="clear">
-
-				<?php edit_post_link(); ?>
-
-			</article>
-			<!-- /article -->
-
-		<?php endwhile; ?>
-
+                <?php endwhile; ?>
+            <div class="container">
+                <h1><?php the_title(); ?></h1>
+                <div><?php the_content(); ?></div>
+            </div>
 		<?php else: ?>
 
 			<!-- article -->
@@ -39,7 +44,5 @@
 		</section>
 		<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

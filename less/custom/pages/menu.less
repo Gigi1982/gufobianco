@@ -5,11 +5,32 @@
     h4 {
         color:@chocolate;
     }
+    .menu-reveal {
+        > i {
+            font-size: 20px;
+        }
+    }
+    &.hidden-menu-open {
+        .menu-reveal {
+            > i {
+                &:before {
+                    content: '\e804';
+                }
+            }
+        }
+    }
     &.menu-item {
         margin-bottom: 20px;
+        .menu-item-img {
+            margin: 40px 0;
+        }
     }
     .menu-row {
         display: flex;
         justify-content: space-between;
     }
+}
+
+.menu-description {
+    margin-bottom: 20px;
 }

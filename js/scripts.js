@@ -57,14 +57,17 @@
         
         $('#lightSlider').lightSlider({
             gallery: true,
+            auto: true,
             item: 1,
             loop: true,
+            pause: 5000,
             slideMargin: 0,
             thumbItem: 9
         });
         
         $(".menu-reveal").click(function(){
             $(".menu-hidden").slideToggle();
+            $(".menu-bg").toggleClass('hidden-menu-open');
             return false;
         });
 		
