@@ -4,10 +4,17 @@
 		<!-- section -->
 		<section class="page-main">
             <div class="page-slideshow">
+                <div class="custom-arrow-slides right">
+                    <a class="nextSlide" href="#"><i class="icon icon-arrow-right"></i></a>
+                </div>
+                <div class="custom-arrow-slides left">
+                    <a class="prevSlide" href="#"><i class="icon icon-arrow-left"></i></a>
+                </div>
                 <?php if(have_rows('main_gallery')): ?>
                 <ul id="lightSlider">
                     <?php while (have_rows('main_gallery')) : the_row(); ?>
                     <li data-thumb="<?php the_sub_field('immagine_piccola'); ?>">
+                        
                         <img class="img-responsive" src="<?php the_sub_field('immagine_grande'); ?>" />
                     </li>
                     <?php endwhile; ?>

@@ -1,15 +1,29 @@
 .category-listing {
     article {
         margin-bottom: 40px;
-        min-height: 450px;
+        //min-height: 450px;
         .read-more {
             color:@red;
         }
         > a {
             display:flex;
             flex-flow: column;
-            min-height: 400px;
+            //min-height: 400px;
             justify-content: flex-start;
+            .news-title {
+                min-height: 30px;
+            }
+            .event-date {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.category-esposizioni {
+    .category-listing {
+        .esposizioni-title {
+            min-height: 60px;
         }
     }
 }

@@ -55,14 +55,26 @@
             })
         }
         
-        $('#lightSlider').lightSlider({
+        var slider = $('#lightSlider').lightSlider({
             gallery: true,
             auto: true,
             item: 1,
             loop: true,
             pause: 5000,
             slideMargin: 0,
-            thumbItem: 9
+            thumbItem: 9,
+            controls:false
+        });
+        
+        //slider;
+        
+        $('.prevSlide').click(function(){
+            slider.goToPrevSlide();
+            return false;
+        });
+        $('.nextSlide').click(function(){
+            slider.goToNextSlide(); 
+            return false;
         });
         
         $(".menu-reveal").click(function(){

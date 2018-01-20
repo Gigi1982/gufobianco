@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
 <defs>
 <font id="fontello" horiz-adv-x="1000" >
 <font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
@@ -15,6 +15,10 @@
 <glyph glyph-name="facebook" unicode="&#xe803;" d="M250 516h125l-15-139h-110v-402h-167v402h-83v139h83v84c0 59 14 104 42 134s74 46 138 46h111v-139h-69c-13 0-23-1-31-3s-13-6-16-12-6-11-7-16-1-14-1-25v-69z" horiz-adv-x="375" />
 
 <glyph glyph-name="down-open" unicode="&#xe804;" d="M939 399l-414-413q-10-11-25-11t-25 11l-414 413q-11 11-11 26t11 25l93 92q10 11 25 11t25-11l296-296 296 296q11 11 25 11t26-11l92-92q11-11 11-25t-11-26z" horiz-adv-x="1000" />
+
+<glyph glyph-name="arrow-left" unicode="&#xe805;" d="M500 820a485 485 0 1 1 485-485 485 485 0 0 1-485 485z m106-228l-268-256a23 23 0 0 1 0-33l268-256" horiz-adv-x="1000" />
+
+<glyph glyph-name="arrow-right" unicode="&#xe806;" d="M500-150a485 485 0 1 1-485 485 485 485 0 0 1 485-485z m-78 212l268 256a23 23 0 0 1 0 33l-268 257" horiz-adv-x="1000" />
 </font>
 </defs>
 </svg>

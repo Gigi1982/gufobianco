@@ -29,14 +29,14 @@
 
 
                                     <!-- post title -->
-                                    <h3><?php the_title(); ?></h3>
+                                    <h3 class="esposizioni-title"><?php the_title(); ?></h3>
                                     <?php if( get_field('data_evento') ): ?>
                                         <span class="event-date"><?php the_field('data_evento'); ?></span>
                                     <?php endif; ?>
 
                                     <!-- /post title -->
 
-                                    <!-- post thumbnail -->
+                                    <!-- post thumbnail custom -->
                                     <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
                                         <?php the_post_thumbnail(array(200,600)); // Declare pixel size you need inside the array ?>
                                     <?php endif; ?>

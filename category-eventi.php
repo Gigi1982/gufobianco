@@ -29,15 +29,17 @@
                             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                 <a data-lightboxTarget="#news-article" href="<?php the_permalink(); ?>" title="Read more">
                                     <!-- post title -->
-                                    <h3><?php the_title(); ?></h3>
+                                    <h3 class="news-title"><?php the_title(); ?></h3>
                                     <?php if( get_field('data_evento') ): ?>
                                         <span class="event-date"><?php the_field('data_evento'); ?></span>
                                     <?php endif; ?>
                                     <!-- /post title -->
 
-                                    <!-- post thumbnail -->
-                                    <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-                                        <div class="news-img-container"><img class="img-responsive" src="<?php echo $url; ?>"></div>
+                                    <!-- post thumbnail custom-->
+                                    <?php if( get_field('anteprima_evento') ): ?>
+                                        <div class="news-img-container">
+                                            <img class="img-responsive" src="<?php the_field('anteprima_evento'); ?>">
+                                        </div>
                                     <?php endif; ?>
                                     <!-- /post thumbnail -->
 
