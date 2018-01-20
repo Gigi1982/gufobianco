@@ -26,8 +26,12 @@
 
                 <?php endwhile; ?>
             <div class="container">
-                <h1><?php the_title(); ?></h1>
-                <div><?php the_content(); ?></div>
+                <div class="row">
+                    <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                        <h1 class="text-center"><?php the_title(); ?></h1>
+                        <div><?php the_content(); ?></div>
+                    </div>
+                </div>
             </div>
 		<?php else: ?>
 

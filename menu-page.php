@@ -43,9 +43,11 @@
                         <div class="col-sm-6 col-md-4">
                             <div class="menu-bg menu-item">
                                 <h4><?php the_sub_field('titolo_menu'); ?></h4>
+<!--
                                 <div class="menu-item-img">
-                                    <img class="img-responsive" src="<?php the_sub_field('immagine_menu'); ?>">
+                                    <img class="img-responsive" src="<?php // the_sub_field('immagine_menu'); ?>">
                                 </div>
+-->
                                 <div class="menu-item-text">
                                     <?php the_sub_field('testo_menu'); ?>
                                 </div>

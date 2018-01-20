@@ -16,16 +16,21 @@
             </div>
             <div class="page-main-inner">
                 <div class="container">
-                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                    <header class="text-center">
-                        <h1><?php the_title(); ?></h1>
-                    </header>
-                    <div class="content">
-                        <?php the_content(); ?>
+                            <header class="text-center">
+                                <h1><?php the_title(); ?></h1>
+                            </header>
+                            <div class="content">
+                                <?php the_content(); ?>
+                            </div>
+
+                            <?php endwhile; endif; ?>
+                        </div>
                     </div>
-
-                    <?php endwhile; endif; ?>
+                    
 
                 </div>
             </div>

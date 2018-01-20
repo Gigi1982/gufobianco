@@ -3,8 +3,7 @@
                 <div class="container">
                     <!-- copyright -->
                     <p class="copyright">
-                        &copy; Al Gufo Bianco - p.iva 08098790010 Corso Dante 129/c 10126 Torino
-<br>Tel 011 66 92 577 / 011 65 05 431 - info@gufobianco.com
+                        &copy; Al Gufo Bianco - p.iva 08098790010 Corso Dante 129/c 10126 Torino - Tel 011 66 92 577 / 011 65 05 431 - info@gufobianco.com
                     </p>
                     <!-- /copyright -->
                 </div>

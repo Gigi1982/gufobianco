@@ -6929,7 +6929,6 @@ h3,
 }
 .main-footer .copyright {
   text-align: center;
-  max-width: 550px;
   margin: 20px auto;
   font-size: 12px;
 }
@@ -6986,6 +6985,9 @@ body.single-post .close-button {
 .single-news-featured-image {
   margin: 40px 0;
 }
+.single-news-featured-image > img {
+  margin: 0 auto;
+}
 @media screen and (max-width: 768px) {
   .single-news-featured-image {
     padding-top: 80px;
@@ -7027,9 +7029,6 @@ body.single-post .close-button {
 .popup-container.loading {
   background: #f9f8f6 url(img/loader.gif) no-repeat center center;
   background-size: 40px;
-}
-.page-main .page-main-inner {
-  padding: 40px 0;
 }
 .page-main .page-slideshow #lightSlider li {
   margin: 0 auto;
@@ -7093,6 +7092,10 @@ body.single-post .close-button {
 }
 .category-listing article {
   margin-bottom: 40px;
+  min-height: 450px;
+}
+.category-listing article .read-more {
+  color: #bf1523;
 }
 .category-listing article > a {
   display: flex;
@@ -9247,7 +9250,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .lSAction > a {
   width: 32px;
   display: block;
-  top: 50%;
+  bottom: 0;
   height: 32px;
   background-image: url('img/controls.png');
   cursor: pointer;

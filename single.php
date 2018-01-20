@@ -21,22 +21,21 @@
                             <!-- single news content -->
                             <!-- post thumbnail -->
                             <section class="news-main-fadein">
-                                <?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-                                    <header class="single-news-featured-image">
-                                        <?php the_post_thumbnail('news-image', array('class'=> "img-responsive"));?>
-                                    </header>
-                                <?php endif; ?>
-                                <!-- /post thumbnail -->
-                                <section class="single-news-container">
+                                
+                                <section class="single-news-container text-center">
                                     <div class="news-content">
+                                        
                                         <header class="news-content-head">
-                                            <div class="date-container"><span class="news-single-date"><?php the_date('d M Y');?></span></div>
+<!--                                            <div class="date-container"><span class="news-single-date"><?php //the_date('d M Y');?></span></div>-->
                                             <h1 class="h2"><?php the_title(); ?></h1>
+                                            <?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+                                                <div class="single-news-featured-image">
+                                                    <?php the_post_thumbnail('news-image', array('class'=> "img-responsive"));?>
+                                                </div>
+                                            <?php endif; ?>
+                                            <!-- /post thumbnail -->
                                         </header>
                                         <section class="news-content-inner">
-                                            <aside class="share-button">
-                                                <div href="#" class="rotated-button">NEWS</div>
-                                            </aside>
                                             <?php the_content();?>
                                         </section>
                                         <footer class="news-footer">
