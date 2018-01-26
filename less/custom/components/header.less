@@ -1,4 +1,4 @@
-@navbar-height: 140px;
+@navbar-height: 102px;
 
 .gufobianco-header {
     background-color: @chocolate;
@@ -16,7 +16,7 @@
             padding:0;
             margin: 0;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             > li {
                 &.current-menu-item {
                     > a {
@@ -27,6 +27,9 @@
                     font-size: 20px; 
                     font-weight: bold;
                     color:@brand-primary;
+                    @media screen and (min-width:@screen-sm) and (max-width:1281px) {
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -39,8 +42,8 @@
     }
     .gufobianco-utility-nav {
         position: absolute;
-        left: 130px;
-        top:30px;
+        left: 140px;
+        //top:30px;
         .language-switcher {
             ul {
                 > li {
@@ -60,8 +63,8 @@
                     background-color: #fff;
                     color: #000;
                     border-radius: 50%;
-                    width:40px;
-                    height: 40px;
+                    width:30px;
+                    height: 30px;
                     display: inline-block;
                     position: relative;
                     > i {

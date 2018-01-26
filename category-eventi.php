@@ -4,9 +4,9 @@
 		<!-- section -->
 		<section class="category-listing">
             <div class="container">
-                <h1><?php single_cat_title(); ?></h1>
+                <h1 class="transitioned-element"><?php single_cat_title(); ?></h1>
 
-                <div class="row">
+                <div class="row transitioned-element">
                      <?php
                             global $wp_query, $paged;
 
@@ -30,20 +30,19 @@
                                 <a data-lightboxTarget="#news-article" href="<?php the_permalink(); ?>" title="Read more">
                                     <!-- post title -->
                                     <h3 class="news-title"><?php the_title(); ?></h3>
-                                    <?php if( get_field('data_evento') ): ?>
-                                        <span class="event-date"><?php the_field('data_evento'); ?></span>
-                                    <?php endif; ?>
                                     <!-- /post title -->
 
                                     <!-- post thumbnail custom-->
                                     <?php if( get_field('anteprima_evento') ): ?>
-                                        <div class="news-img-container">
-                                            <img class="img-responsive" src="<?php the_field('anteprima_evento'); ?>">
+                                        <div class="news-img-container embed-responsive embed-responsive-square">
+                                            <img class="embed-responsive-item" src="<?php the_field('anteprima_evento'); ?>">
                                         </div>
                                     <?php endif; ?>
                                     <!-- /post thumbnail -->
 
-                                    <?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+                                    <?php //html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+                                    
+                                    <span class="read-more text-right">Leggi tutto ></span>
                                 </a>
                             </article>
                         </div>

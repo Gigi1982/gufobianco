@@ -1,6 +1,8 @@
 (function ($, root, undefined) {
 	
 	$(function () {
+        
+        setScrollMagic();
 		
 		'use strict';
 		
@@ -82,6 +84,58 @@
             $(".menu-bg").toggleClass('hidden-menu-open');
             return false;
         });
+        
+        
+        function setScrollMagic() {
+        scrollController = new ScrollMagic.Controller()
+        scrollController.scrollTo(function(newScrollPos) {
+            $('html, body').animate({scrollTop: newScrollPos}, 800)
+        })
+
+        new ScrollMagic.Scene({
+            offset: 180
+        })
+        .setClassToggle('body', 'header--compressed')
+        .addTo(scrollController);
+        
+        
+        /*$(".main-content .main-section").each(function(index) {
+            var section = $(this)
+
+            // Parallasse testi e immagini di ogni sezione
+            new ScrollMagic.Scene({
+                triggerElement: this,
+                triggerHook:0.5,
+                duration: "150%"
+            })
+            .on("progress", function (e) {
+                var val = e.progress.toFixed(3);
+                section.find(".text-parallax").css("transform", "translate3d(0,"+val*(200)+"px, 0)");
+                section.find(".js-parallax").css("transform", "translate3d(0,-"+val*(200)+"px, 0)");
+            })
+            .addTo(scrollController);
+
+
+        });*/
+
+        $(".transitioned-element").each(function(index) {
+            var section = $(this)
+
+            // Parallasse testi e immagini di ogni sezione
+            new ScrollMagic.Scene({
+                triggerElement: this,
+                triggerHook: section.attr("data-hook") || 0.5,
+                duration: "150%"
+            })
+            .on("enter", function (e) {
+                section.addClass('visible');
+            })
+            //.addIndicators({name: "transitioned-element"})
+            .addTo(scrollController);
+
+        });
+        
+    }
 		
 	});
 	

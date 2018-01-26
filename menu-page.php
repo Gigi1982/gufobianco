@@ -5,8 +5,8 @@
 		<section class="page-main">
             <div class="page-main-inner">
                 <div class="container">
-                    <h2 class="h1 text-center">la nostra carta</h2>
-                    <div class="menu-bg menu-item big">
+                    <h2 class="h1 text-center transitioned-element">la nostra carta</h2>
+                    <div class="menu-bg menu-item big transitioned-element">
                         <h4>La nostra carta</h4>
                         <?php if(have_rows('menu_la_carta')): ?>
                         <?php while (have_rows('menu_la_carta')) : the_row(); ?>
@@ -32,7 +32,7 @@
                         <?php endif; ?>
                     </div>
                     <?php if(have_rows('menu_aggiuntivi')): ?>  
-                    <div class="menu-description text-center">
+                    <div class="menu-description text-center transitioned-element">
                         <h2 class="h1">proposte menù</h2>
                         <p>Il ristorante effettua servizio alla carta<br>
     Di seguito, alcune proposte menù per gruppi di almeno quindici persone</p>
@@ -40,9 +40,10 @@
                     
                     <div class="row">
                         <?php while (have_rows('menu_aggiuntivi')) : the_row(); ?>
-                        <div class="col-sm-6 col-md-4">
+                        <div class="col-sm-6 col-md-4 transitioned-element">
                             <div class="menu-bg menu-item">
                                 <h4><?php the_sub_field('titolo_menu'); ?></h4>
+                                <span class="h4"><?php the_sub_field('sottotitolo_menu'); ?></span>
 <!--
                                 <div class="menu-item-img">
                                     <img class="img-responsive" src="<?php // the_sub_field('immagine_menu'); ?>">

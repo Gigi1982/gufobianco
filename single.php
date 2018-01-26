@@ -27,7 +27,7 @@
                                         
                                         <header class="news-content-head">
 <!--                                            <div class="date-container"><span class="news-single-date"><?php //the_date('d M Y');?></span></div>-->
-                                            <h1 class="h2"><?php the_title(); ?></h1>
+                                            <h1 class="sr-only"><?php the_title(); ?></h1>
                                             <?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
                                                 <div class="single-news-featured-image">
                                                     <?php the_post_thumbnail('news-image', array('class'=> "img-responsive"));?>
@@ -36,7 +36,17 @@
                                             <!-- /post thumbnail -->
                                         </header>
                                         <section class="news-content-inner">
-                                            <?php the_content();?>
+                                            <?php if( get_field('data_evento') ): ?>
+                                                <span class="event-date"><?php the_field('data_evento'); ?></span>
+                                            <?php endif; ?>
+
+                                            <!-- partnership -->
+                                            <?php if( get_field('collaborazione_evento') ): ?>
+                                                <span class="event-date"><?php the_field('collaborazione_evento'); ?></span>
+                                            <?php endif; ?>
+                                            <div>
+                                                <?php the_content();?>
+                                            </div>
                                         </section>
                                         <footer class="news-footer">
                                              <!--if previous post exists-->
@@ -45,7 +55,7 @@
                                             if (!empty( $prev_post )): ?>
                                             <div class="navigation-left">
                                                 <div class="content-navigation">
-                                                    <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="news-links"><i class="svgicons svgicons-back-button"></i></a>
+                                                    <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="news-links"><i class="icon icon-arrow-left"></i></a>
                                                 </div>
                                             </div>
                                             <?php endif; ?>
@@ -55,7 +65,7 @@
                                             if (!empty( $next_post )): ?>
                                             <div class="navigation-right">
                                                 <div class="content-navigation">
-                                                    <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="news-links"><i class="svgicons svgicons-next-button"></i></a>
+                                                    <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="news-links"><i class="icon icon-arrow-right"></i></a>
                                                 </div>
                                             </div>
                                             <?php endif; ?>

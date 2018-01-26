@@ -3,7 +3,7 @@
 	<main role="main">
 		<!-- section -->
 		<section class="page-main">
-            <div class="page-slideshow">
+            <div class="page-slideshow transitioned-element">
                 <div class="custom-arrow-slides right">
                     <a class="nextSlide" href="#"><i class="icon icon-arrow-right"></i></a>
                 </div>

@@ -8,7 +8,7 @@
                     <!-- article -->
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                        <section class="contact-map">
+                        <section class="contact-map transitioned-element">
                             <?php 
 
                             $locationCont = get_field('mappa');
@@ -25,7 +25,7 @@
                     <!-- /article -->
 
                 <?php endwhile; ?>
-            <div class="container">
+            <div class="container transitioned-element">
                 <div class="row">
                     <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                         <h1 class="text-center"><?php the_title(); ?></h1>
