@@ -55,7 +55,7 @@
                                             if (!empty( $prev_post )): ?>
                                             <div class="navigation-left">
                                                 <div class="content-navigation">
-                                                    <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="news-links"><i class="icon icon-arrow-left"></i></a>
+                                                    <a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="news-links"><span class="hidden-xs">Precedente</span><i class="icon icon-arrow-left"></i></a>
                                                 </div>
                                             </div>
                                             <?php endif; ?>
@@ -65,7 +65,7 @@
                                             if (!empty( $next_post )): ?>
                                             <div class="navigation-right">
                                                 <div class="content-navigation">
-                                                    <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="news-links"><i class="icon icon-arrow-right"></i></a>
+                                                    <a href="<?php echo get_permalink( $next_post->ID ); ?>" class="news-links"><i class="icon icon-arrow-right"></i><span class="hidden-xs">Prossimo</span></a>
                                                 </div>
                                             </div>
                                             <?php endif; ?>

@@ -47,7 +47,7 @@
 			<header class="header clear gufobianco-header" role="banner">
                 
                 <div class="container-fluid">
-                    <div class="gufobianco-utility-nav">
+                    <div class="gufobianco-utility-nav visible-md visible-lg">
                         <nav class="language-switcher">
                             <ul class="list-unstyled">
                                 <li>
@@ -63,8 +63,20 @@
                         </nav>
                     </div>
                     <div class="gufobianco-header-container">
+                        <div class="mobile-nav-icon visible-xs visible-sm">
+                            <a href="#" id="nav-icon3" class="hidden-md hidden-lg">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </a>
+                        </div>
                         <!-- nav -->
-                        <nav class="nav gufobianco-desktop-nav" role="navigation">
+                        <nav class="nav gufobianco-desktop-nav visible-md visible-lg" role="navigation">
+                            <?php html5blank_nav(); ?>
+                        </nav>
+                        
+                        <nav class="gufobianco-mobile-nav">
                             <?php html5blank_nav(); ?>
                         </nav>
                         <!-- /nav -->

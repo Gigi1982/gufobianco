@@ -70,14 +70,20 @@ body.single-post {
         margin: 0 auto;
     }
     @media screen and (max-width:768px) {
-        padding-top: 80px;
+        margin:10px 0;
+        padding-top: 20px;
     }
+}
+
+.news-content {
+    position: relative;
+    padding-bottom: 40px;
 }
 
 .news-popup-container{
     .news-article-inner {
         background-color: @brand-primary;
-        padding: 40px 100px;
+        padding: 40px 20px;
     }
     .news-main-fadein {
         position: relative;
@@ -92,6 +98,23 @@ body.single-post {
             padding-left: 20px;
             padding-right: 20px;
             padding-top: 20px;
+        }
+    }    
+}
+
+.news-footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    .navigation-left, .navigation-right {
+        .news-links {
+            > i {
+                font-size: 24px;
+            }
         }
     }
 }

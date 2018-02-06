@@ -5,10 +5,10 @@
 		<section class="page-main">
             <div class="page-slideshow transitioned-element">
                 <div class="custom-arrow-slides right">
-                    <a class="nextSlide" href="#"><i class="icon icon-arrow-right"></i></a>
+                    <a class="nextSlide" href="#"><i class="icon icon-right-circled"></i></a>
                 </div>
                 <div class="custom-arrow-slides left">
-                    <a class="prevSlide" href="#"><i class="icon icon-arrow-left"></i></a>
+                    <a class="prevSlide" href="#"><i class="icon icon-left-circled"></i></a>
                 </div>
                 <?php if(have_rows('main_gallery')): ?>
                 <ul id="lightSlider">
