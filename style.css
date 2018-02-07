@@ -6751,6 +6751,12 @@ a {
   height: 4px;
   background-color: #fff;
 }
+.read-more {
+  color: #bf1523;
+  font-style: italic;
+  margin-top: 20px;
+  font-weight: normal;
+}
 .embed-responsive-square {
   padding-bottom: 100%;
 }
@@ -6953,6 +6959,9 @@ h3,
 .gufobianco-header .gufobianco-utility-nav .language-switcher ul > li > a {
   color: #fff;
 }
+.gufobianco-header .social-nav {
+  margin-top: 15px;
+}
 .gufobianco-header .social-nav ul {
   display: flex;
   justify-content: space-around;
@@ -6965,6 +6974,7 @@ h3,
   height: 30px;
   display: inline-block;
   position: relative;
+  margin-right: 5px;
 }
 .gufobianco-header .social-nav ul > li > a > i {
   position: absolute;
@@ -7196,6 +7206,43 @@ h3,
     bottom: 0px;
   }
 }
+.menu-popup-container {
+  opacity: 0;
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  height: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  pointer-events: none;
+  transition: all 400ms ease-in-out;
+}
+.menu-popup-container .menu-popup-inner {
+  background-color: #d3c3aa;
+  padding: 40px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 80%;
+}
+.menu-popup-container .menu-popup-inner .close-menu-container {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 11;
+}
+.menu-popup-container .menu-popup-inner .close-menu-container .close-menu-button {
+  color: #fff;
+  font-size: 32px;
+}
+.menu-popup-container.opened {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
 .news-listing .gufo-news-last {
   list-style-type: none;
   margin: 0;
@@ -7363,6 +7410,9 @@ body.single-post .close-button {
 .menu-bg.menu-item .menu-item-img {
   margin: 40px 0;
 }
+.menu-bg.menu-item .menu-open {
+  display: block;
+}
 .menu-bg .menu-row {
   display: flex;
   justify-content: space-between;
@@ -7372,10 +7422,6 @@ body.single-post .close-button {
 }
 .category-listing article {
   margin-bottom: 40px;
-}
-.category-listing article .read-more {
-  color: #bf1523;
-  margin-top: 20px;
 }
 .category-listing article > a {
   display: flex;

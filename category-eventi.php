@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section class="category-listing">
             <div class="container">
-                <h1 class="transitioned-element"><?php single_cat_title(); ?></h1>
+                <h1 class="transitioned-element text-center"><?php single_cat_title(); ?></h1>
 
                 <div class="row transitioned-element">
                      <?php

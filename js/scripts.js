@@ -14,6 +14,19 @@
             return false;
         });
         
+        $(".menu-open").click(function(e){
+            var dataTargetId = $(this).data('target');
+            console.log(dataTargetId);
+            //$(dataTargetId).show();
+            $(dataTargetId).addClass('opened');
+            return false;
+        });
+        
+        $(".close-menu-button").click(function(e){
+            $('.menu-popup-container').removeClass('opened');
+            return false;
+        });
+        
         function openLightbox(url, tg){
             var popUp = jQuery(".popup-container");
             popUp.fadeIn().addClass("loading");
@@ -131,8 +144,8 @@
             // Parallasse testi e immagini di ogni sezione
             new ScrollMagic.Scene({
                 triggerElement: this,
-                triggerHook: section.attr("data-hook") || 0.5,
-                duration: "150%"
+                triggerHook: section.attr("data-hook") || 0.8,
+                duration: "100%"
             })
             .on("enter", function (e) {
                 section.addClass('visible');

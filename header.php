@@ -48,7 +48,7 @@
                 
                 <div class="container-fluid">
                     <div class="gufobianco-utility-nav visible-md visible-lg">
-                        <nav class="language-switcher">
+                        <nav style="display:none;" class="language-switcher">
                             <ul class="list-unstyled">
                                 <li>
                                     <a href="#">ITALIANO</a>

@@ -15,7 +15,7 @@ della genuinità e con un tocco di creatività.</p>
                 </section>
                 
                 <section class="content-boxes news-listing">
-                    <h2 class="h1 transitioned-element">NEWS</h2>
+                    <h2 class="h2 transitioned-element">News</h2>
                     <ul class="gufo-news-last">
                         <?php
                             global $wp_query, $paged;
