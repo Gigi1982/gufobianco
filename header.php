@@ -57,8 +57,8 @@
                         </nav>
                         <nav class="social-nav">
                             <ul class="list-unstyled">
-                                <li><a href="#"><i class="icon icon-facebook"></i></a></li>
-                                <li><a href="#"><i class="icon icon-instagram"></i></a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/Ristorante-Al-Gufo-Bianco-163238287082128/"><i class="icon icon-facebook"></i></a></li>
+                                <li><a target="_blank" href="https://www.instagram.com/al_gufo_bianco_ristorante_/"><i class="icon icon-instagram"></i></a></li>
                             </ul>
                         </nav>
                     </div>
