@@ -44,7 +44,7 @@
                         ?>
                         <div class="col-sm-6 col-md-4 transitioned-element">
                             <a data-target="#menu<?php echo $indexMenu; ?>" href="#" class="menu-open">
-                                <div class="menu-bg menu-item">
+                                <div class="menu-bg smaller menu-item">
                                     <h4><?php the_sub_field('titolo_menu'); ?></h4>
                                     <span class="h4"><?php the_sub_field('sottotitolo_menu'); ?></span>
                                     <?php if( get_sub_field('immagine_menu') ): ?>
@@ -77,9 +77,13 @@
                     <header class="close-menu-container">
                         <a href="#" class="close-menu-button"><i class="icon icon-cancel"></i></a>
                     </header>
-                    <div class="menu-popup-content text-center">
-                        <h2><?php the_sub_field('titolo_menu'); ?></h2>
-                        <p><?php the_sub_field('testo_menu'); ?></p>
+                    <div class="menu-popup-content">
+                        <div class="row">
+                            <div class="col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4">
+                                <h2 class="text-center"><?php the_sub_field('titolo_menu'); ?></h2>
+                                <p><?php the_sub_field('testo_menu'); ?></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

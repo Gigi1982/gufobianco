@@ -1,5 +1,5 @@
 .main-footer {
-    background-color: @chocolate;
+    background-color: #624f41;
     color: #fff;
     position: fixed;
     left: 0;
@@ -11,9 +11,20 @@
         //max-width: 550px;
         margin: 20px auto;
         font-size: 12px;
+        @media screen and (max-width:@screen-xs) {
+            margin:10px auto;
+        }
     }
     a {
         color:#fff !important;
         text-decoration: underline !important;
+    }
+    .footer-icon-container {
+        margin-bottom: 10px;
+    }
+    .footer-mobile-links {
+        .icon {
+            font-size: 20px;
+        }
     }
 }

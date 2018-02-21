@@ -3,6 +3,26 @@
 	<main role="main">
 		<!-- section -->
 		<section class="page-main">
+            <div class="page-main-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+                            <header class="text-center">
+                                <h1><?php the_title(); ?></h1>
+                            </header>
+                            <div class="content">
+                                <?php the_content(); ?>
+                            </div>
+
+                            <?php endwhile; endif; ?>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
             <div class="page-slideshow transitioned-element">
                 <div class="custom-arrow-slides right">
                     <a class="nextSlide" href="#"><i class="icon icon-right-circled"></i></a>
@@ -21,26 +41,7 @@
                 </ul>
                 <?php endif; ?>
             </div>
-            <div class="page-main-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-                            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-                            <header class="text-center">
-                                <h1><?php the_title(); ?></h1>
-                            </header>
-                            <div class="content">
-                                <?php the_content(); ?>
-                            </div>
-
-                            <?php endwhile; endif; ?>
-                        </div>
-                    </div>
-                    
-
-                </div>
-            </div>
+            
 		</section>
 		<!-- /section -->
 	</main>

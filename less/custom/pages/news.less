@@ -107,15 +107,31 @@ body.single-post {
     bottom: 0;
     left: 50%;
     transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
     display: flex;
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
     width:100%;
     justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -webkit-box-pack: justify;
     .navigation-left, .navigation-right {
+        position: absolute;
+        bottom:0;
         .news-links {
             > i {
                 font-size: 24px;
             }
         }
+    }
+    .navigation-left {
+        left:0;
+    }
+    .navigation-right {
+        right: 0;
     }
 }
 

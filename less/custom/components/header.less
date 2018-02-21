@@ -3,10 +3,23 @@
 .gufobianco-header {
     background-color: @chocolate;
     height:@navbar-height;
+    top:0;
+    left:0;
+    right:0;
+    position: fixed;
+    z-index: 2;
     .gufobianco-header-container {
         display: flex;
+        display:-webkit-flex;
+        display:-webkit-box;
+        display:-moz-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -webkit-box-pack: justify;
         align-items: flex-end;
+        -webkit-box-align: end; /* align-items */
         height: @navbar-height;
     }
     .gufobianco-desktop-nav {
@@ -16,7 +29,14 @@
             padding:0;
             margin: 0;
             display: flex;
+            display:-webkit-flex;
+            display:-webkit-box;
+            display:-moz-flex;
+            display:-moz-box;
+            display:-ms-flexbox;
             justify-content: space-between;
+            -webkit-justify-content: space-between;
+            -webkit-box-pack: justify;
             > li {
                 &.current-menu-item {
                     > a {
@@ -58,7 +78,14 @@
         margin-top:15px;
         ul {
             display: flex;
+            display:-webkit-flex;
+            display:-webkit-box;
+            display:-moz-flex;
+            display:-moz-box;
+            display:-ms-flexbox;
             justify-content: space-around;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
             >li {
                 > a {
                     background-color: #fff;
@@ -74,6 +101,7 @@
                         top:50%;
                         left: 50%;
                         transform: translate(-50%,-50%);
+                         -webkit-transform: translate(-50%, -50%);
                         font-size: 20px;
                     }
                 }
@@ -182,6 +210,7 @@
     background: @brand-primary;
     z-index: 2;
     transform: translateY(-100%);
+     -webkit-transform: translateY(-100%);
     transition: transform 400ms ease-in-out;
     > ul {
         list-style-type: none;
@@ -191,6 +220,7 @@
         top:50%;
         left: 50%;
         transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
         > li {
             text-align: center;
             padding:10px 0;
@@ -204,5 +234,6 @@
 .nav-open {
     .gufobianco-mobile-nav {
         transform: translateY(0);
+        -webkit-transform: translateY(0);
     }
 }

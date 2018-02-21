@@ -51,7 +51,7 @@
                                         <footer class="news-footer">
                                              <!--if previous post exists-->
                                             <?php
-                                            $prev_post = get_previous_post();
+                                            $prev_post = get_previous_post(true);
                                             if (!empty( $prev_post )): ?>
                                             <div class="navigation-left">
                                                 <div class="content-navigation">
@@ -61,7 +61,7 @@
                                             <?php endif; ?>
                                             <!--if next post exists-->
                                             <?php
-                                            $next_post = get_next_post();
+                                            $next_post = get_next_post(true);
                                             if (!empty( $next_post )): ?>
                                             <div class="navigation-right">
                                                 <div class="content-navigation">

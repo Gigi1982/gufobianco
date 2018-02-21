@@ -16,7 +16,8 @@
                                 'post_type'        => 'post',
                                 'post_status'      => 'publish',
                                 'suppress_filters' => true,
-                                'order' => 'DESC'
+                                'orderby'   => 'date',
+                                'orderby' => 'DESC'
                             );
                             $EventiArticleQuery = new WP_Query( $EventiArticleArgs );                  
                         ?>
