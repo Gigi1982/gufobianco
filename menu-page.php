@@ -8,12 +8,14 @@
                     <h1 class="sr-only">Menù</h1>
                     <h2 class="h2 text-center transitioned-element">la nostra carta</h2>
                     <div class="menu-bg menu-item big transitioned-element">
-                        <h4>La nostra carta</h4>
+<!--                        <h4>La nostra carta</h4>-->
                         <?php if(have_rows('menu_la_carta')): ?>
                         <?php while (have_rows('menu_la_carta')) : the_row(); ?>
                             <div class="menu-row">
                                 <span class="plate-name"><?php the_sub_field('nome_piatto'); ?></span>
-                                <span class="price"><?php the_sub_field('prezzo_piatto'); ?> <span>€</span></span>
+                                <?php if( get_sub_field('prezzo_piatto') ): ?>
+                                    <span class="price"><?php the_sub_field('prezzo_piatto'); ?> <span>€</span></span>
+                                <?php endif; ?>
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>
@@ -23,7 +25,9 @@
                                 <?php while (have_rows('menu_la_carta_nascosto')) : the_row(); ?>
                                 <div class="menu-row">
                                     <span class="plate-name"><?php the_sub_field('nome_piatto'); ?></span>
-                                    <span class="price"><?php the_sub_field('prezzo_piatto'); ?> <span>€</span></span>
+                                    <?php if( get_sub_field('prezzo_piatto') ): ?>
+                                        <span class="price"><?php the_sub_field('prezzo_piatto'); ?> <span>€</span></span>
+                                    <?php endif; ?>
                                 </div>
                                 <?php endwhile; ?>
                             </div>
