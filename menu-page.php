@@ -13,9 +13,7 @@
                         <?php while (have_rows('menu_la_carta')) : the_row(); ?>
                             <div class="menu-row">
                                 <span class="plate-name"><?php the_sub_field('nome_piatto'); ?></span>
-                                <?php if( get_sub_field('prezzo_piatto') ): ?>
-                                    <span class="price"><?php the_sub_field('prezzo_piatto'); ?> <span>€</span></span>
-                                <?php endif; ?>
+                                <span class="price"><?php the_sub_field('prezzo_piatto'); ?></span>
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>
@@ -25,14 +23,12 @@
                                 <?php while (have_rows('menu_la_carta_nascosto')) : the_row(); ?>
                                 <div class="menu-row">
                                     <span class="plate-name"><?php the_sub_field('nome_piatto'); ?></span>
-                                    <?php if( get_sub_field('prezzo_piatto') ): ?>
-                                        <span class="price"><?php the_sub_field('prezzo_piatto'); ?> <span>€</span></span>
-                                    <?php endif; ?>
+                                    <span class="price"><?php the_sub_field('prezzo_piatto'); ?></span>
                                 </div>
                                 <?php endwhile; ?>
                             </div>
                             <div class="text-right">
-                                <a href="#" class="text-right menu-reveal">scopri il nostro menù<i class="icon icon-up-open"></i></a>
+                                <a href="#" class="read-more text-right menu-reveal">Leggi tutto ></a>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -73,6 +69,8 @@
         <?php if(have_rows('menu_aggiuntivi')): ?>
         <?php
             $indexMenu = 1;
+            $indexMenuNext = 2;
+            $indexMenuPrev = 0;
             while (have_rows('menu_aggiuntivi')) : the_row(); 
         ?>
         <section id="menu<?php echo $indexMenu; ?>" class="menu-popup-container">
@@ -83,17 +81,26 @@
                     </header>
                     <div class="menu-popup-content">
                         <div class="row">
-                            <div class="col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4">
-                                <h2 class="text-center"><?php the_sub_field('titolo_menu'); ?></h2>
-                                <p><?php the_sub_field('testo_menu'); ?></p>
+                            <div class="col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-10">
+                                <h2 class="text-center">menù</h2>
+                                <p><?php the_sub_field('testo_menu'); ?></p>                                
                             </div>
                         </div>
+                        <footer class="news-footer">
+                            <div class="navigation-right">
+                                <a class="menu-open next" href="#" data-target="#menu<?php echo $indexMenuNext; ?>">Successivo <i class="icon icon-arrow-right"></i> </a></div>
+                            <div class="navigation-left">
+                                <a class="menu-open prev" href="#" data-target="#menu<?php echo $indexMenuPrev; ?>"><i class="icon icon-arrow-left"></i> Precedente</a>
+                                </div>
+                        </footer>
                     </div>
                 </div>
             </div>
         </section>
         <?php 
         $indexMenu++;
+        $indexMenuNext++;
+        $indexMenuPrev++;
         endwhile; 
         ?>
         <?php endif; ?>

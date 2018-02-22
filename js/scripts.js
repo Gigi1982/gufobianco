@@ -16,9 +16,20 @@
         
         $(".menu-open").click(function(e){
             var dataTargetId = $(this).data('target');
-            console.log(dataTargetId);
-            //$(dataTargetId).show();
             $(dataTargetId).addClass('opened');
+            return false;
+        });
+        
+        /*$(".menu-open.next").click(function(e){
+            $('.menu-popup-container').siblings().removeClass('opened');
+            console.log(dataTargetIdNext);
+            return false;
+        });*/
+        
+        $(".prev-menu-open").click(function(e){
+            var dataTargetIdPrev = $('.menu-open').eq(-2).data('target');
+            console.log(dataTargetIdPrev);
+            $(dataTargetIdPrev).addClass('opened');
             return false;
         });
         
