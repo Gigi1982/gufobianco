@@ -7534,10 +7534,10 @@ body.single-post .close-button {
   justify-content: space-between;
   min-height: 14px;
 }
-#menu1 .navigation-left {
+.menu-popup-container#menu1 .navigation-left {
   display: none;
 }
-#menu3 .navigation-right {
+.menu-popup-container:last-child .navigation-right {
   display: none;
 }
 .menu-description {
