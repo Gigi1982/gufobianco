@@ -13,10 +13,10 @@ function playAnimation(){
             jQuery('#first .text-box').fadeOut(100, function() {
                 jQuery("#second").fadeIn(400,function (){
                     jQuery('#second img').addClass('zooming');
-                }).delay(6000).queue(function(next){
+                }).delay(7000).queue(function(next){
                     jQuery('#second .text-box').fadeIn();
                     next();
-                }).delay(1000).queue(function(next){
+                }).delay(3000).queue(function(next){
                     //console.log('penultimo step');
                     jQuery('#second').fadeOut(100, function(){
                         jQuery('#second .text-box').fadeOut(100, function() {

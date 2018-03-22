@@ -13,6 +13,6 @@
 <div class="slideshow-inner" id="third" style="display:none;">
     <img src="<?php echo get_template_directory_uri().'/img/intro/HP_immagine_3.jpg' ?>">
     <div class="slideshow-description text-box" style="display:none;">
-        <span class="big-titles">...la storia continua</span>
+        <span class="big-titles">...la storia<br> continua</span>
     </div>
 </div>
