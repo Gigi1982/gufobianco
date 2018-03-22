@@ -1,0 +1,45 @@
+.front-intro {
+    height:calc(~"100vh - 200px");
+    display: flex;
+    overflow: hidden;
+    .slideshow-inner {
+        position: relative;
+        flex: 1;
+        height: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            min-height: 100vh;
+            transform: scale(1.4);
+            transition: transform 7s linear;
+            &.zooming {
+                transform: scale(1);
+            }
+        }
+        .text-box {
+            position: absolute;
+            font-size: 30px;
+        }
+    }
+    #first {
+        .text-box {
+            left:50%;
+            transform: translate(-50%,0);
+            bottom:100px;
+        }
+    }
+    #second {
+        .text-box {
+            left:50%;
+            transform: translate(-50%,0);
+            top:100px;
+        }
+    }
+    #third {
+        .text-box {
+            left:100px;
+            top:100px;
+        }
+    }
+}

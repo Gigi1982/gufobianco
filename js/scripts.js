@@ -5,6 +5,10 @@
         setScrollMagic();
 		
 		'use strict';
+        
+        if ($('.front-intro').length>0) {
+            playAnimation();
+        }
 		
 		$("[data-lightboxTarget]").bind("click",function(e){
             e.preventDefault();
