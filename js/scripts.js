@@ -7,8 +7,17 @@
 		'use strict';
         
         if ($('.front-intro').length>0) {
-            playAnimation();
+            //playAnimation();
         }
+        
+        var mySwiper = new Swiper('.swiper-container', {
+            speed: 400,
+            spaceBetween: 0,
+            effect: 'fade',
+            autoplay: {
+                delay: 7000,
+            }
+        });
 		
 		$("[data-lightboxTarget]").bind("click",function(e){
             e.preventDefault();
@@ -43,6 +52,7 @@
             $('.menu-popup-container').removeClass('opened');
             return false;
         });
+        
         
         function removeMenu() {
             $(".menu-popup-container").removeClass('opened');
